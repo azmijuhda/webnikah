@@ -1,0 +1,25 @@
+@font-face {
+    font-family: lemon;
+    src: url(LemonMilkbold.otf);
+}
+.judul {
+	font-size: 100px;
+	font-family: lemon;
+	color: white;
+}
+.fitur{
+	text-align: center;
+}
+.cfitur{
+	padding: 0px 50px 50px 50px;
+	font-size: 16px;
+}
+#about {
+    background: url('../images/aaaz.jpg') no-repeat center center;
+}
+.footers{
+	margin-top: 50px;
+	margin-bottom: -40px;
+	color: white;
+	text-align: center;
+} 

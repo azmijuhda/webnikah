@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap3/js/bootstrap.min.js"></script>
+    <script src="jquery.easing.min.js"></script>
+    <script src="bootstrap-datepicker.min.js"></script>
+    <title>E-married</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">E-Married</a>
+            </div>
+              
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- MultiStep Form -->
+<div class="">
+    <div class="col-md-6 col-md-offset-3">
+        <form id="msform" class="form-horizontal">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active">Surat keterangan untuk nikah</li>
+                <li>Surat keterangan asal-usul</li>
+                <li>Surat persetujuan mempelai</li>
+                <li>Surat keterangan tentang orang tua</li>
+                <li>Surat Izin Orang tua</li>
+                <li>Surat Kematian</li>
+            </ul>
+            <!-- fieldsets -->
+            <fieldset>
+                <h2 class="fs-title"><u>Surat Keterangan Nikah</u></h2>
+                <div class="row">
+                    <div class="col-md-4"><input type="text" name="kantor" placeholder="Desa"/></div>
+                    <div class="col-md-4"><input type="text" name="kecamatan" placeholder="Kecamatan"/></div>
+                    <div class="col-md-4"><input type="text" name="kabupaten" placeholder="Kabupaten/Kota"/></div>
+                </div>
+                
+                <hr style="border: 1px solid #5D5C5E;">
+                <div class="row">
+                    <div class="col-md-6"><input type="text" name="nama" placeholder="Nama Lengkap dan Alias"/></div>
+                    <div class="col-md-6">
+                        <select class="input" name="" id="">
+                            <option value="">Jenis Kelamin</option>
+                            <option value="pria">Pria</option>
+                            <option value="wanita">Wanita</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">                    
+                        Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                    </div>
+                    <div class="col-md-6">
+                        Tanggal Lahir <input type="date" name="tanggalLahir">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="warganegara" placeholder="Warganegara"/>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="input" name="" id="">
+                            <option value="">Agama</option>
+                            <option value="islam">Islam</option>
+                            <option value="kristen">Kristen</option>                    
+                            <option value="hindu">Hindu</option>
+                            <option value="budha">Budha</option>
+                            <option value="konghucu">Konghucu</option>
+                            <option value="katolik">Katolik</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="pekerjaan" placeholder="Pekerjaan"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="tempatTinggal" placeholder="Tempat Tinggal"/>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="bin" placeholder="Bin/Binti"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2 ">
+                        <label for="" class="control-label"> Status Perkawinan: </label>
+                    </div>
+                    
+                    <div class="col-md-5">
+                            <input type="text" name="bin" placeholder="Jika Pria, terangkan jejaka, duda atau beristri dan berapa istrinya"/>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" name="bin" placeholder="Jika Pria, terangkan jejaka, dudua atau beristri dan berapa istrinya"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="istrisuamilama" placeholder="Nama Istri/Suami terdahulu"/>
+                    </div>
+                </div>
+
+                <input type="button" name="next" class="next action-button" value="Save & Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title"><u>Surat Keterangan Asal-Usul</u></h2>
+                <div class="row">
+                    <p>Yang mengetik di bawah ini menerangkan dengan sesungguhnya bahwa:</p></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="nama" placeholder="Nama Lengkap & Alias"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="warganegara" placeholder="Warganegara"/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                        
+                    </div>
+                    <div class="col-md-6">
+                        Tanggal Lahir <input type="date" name="tanggalLahir">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="warganegara" placeholder="Warganegara"/>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="input" name="" id="">
+                            <option value="">Agama</option>
+                            <option value="islam">Islam</option>
+                            <option value="kristen">Kristen</option>                    
+                            <option value="hindu">Hindu</option>
+                            <option value="budha">Budha</option>
+                            <option value="konghucu">Konghucu</option>
+                            <option value="katolik">Katolik</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="pekerjaan" placeholder="Pekerjaan"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="tempatTinggal" placeholder="Tempat Tinggal"/>
+                    </div>
+                </div>
+                <div class="row"><p>adalah benar Ayah Kandung dan ibu kandung dari seorang :</p></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="nama" placeholder="Nama Lengkap & Alias"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="warganegara" placeholder="Warganegara"/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                    </div>
+                    <div class="col-md-6">
+                        Tanggal Lahir <input type="date" name="tanggalLahir">
+                    </div>
+                </div>
+                    
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="warganegara" placeholder="Warganegara"/>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="input" name="" id="">
+                            <option value="">Agama</option>
+                            <option value="islam">Islam</option>
+                            <option value="kristen">Kristen</option>                    
+                            <option value="hindu">Hindu</option>
+                            <option value="budha">Budha</option>
+                            <option value="konghucu">Konghucu</option>
+                            <option value="katolik">Katolik</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="pekerjaan" placeholder="Pekerjaan"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="tempatTinggal" placeholder="Tempat Tinggal"/>
+                    </div>
+                </div>
+                <div class="row"><p>dengan seorang wanita :</p></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="nama" placeholder="Nama Lengkap & Alias"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="warganegara" placeholder="Warganegara"/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                    </div>
+                    <div class="col-md-6">
+                        Tanggal Lahir <input type="date" name="tanggalLahir">
+                    </div>
+                </div>
+                        
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="warganegara" placeholder="Warganegara"/>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="input" name="" id="">
+                            <option value="">Agama</option>
+                            <option value="islam">Islam</option>
+                            <option value="kristen">Kristen</option>                    
+                            <option value="hindu">Hindu</option>
+                            <option value="budha">Budha</option>
+                            <option value="konghucu">Konghucu</option>
+                            <option value="katolik">Katolik</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="pekerjaan" placeholder="Pekerjaan"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="tempatTinggal" placeholder="Tempat Tinggal"/>
+                    </div>
+                </div>    
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title"><u>Surat Persetujuan Mempelai</u></h2>
+                <div class="row"><p style="text-align: left;">Yang mengetik dibawah ini: </p></div>
+                <div class="row"><p style="text-align: left;"><b>I.&emsp;Calon Suami</b></p></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="nama" placeholder="Nama Lengkap dan Alias"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="bin" placeholder="Bin"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">                    
+                        Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                    </div>
+                    <div class="col-md-6">
+                        Tanggal Lahir <input type="date" name="tanggalLahir">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="warganegara" placeholder="Warganegara"/>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="input" name="agama" id="">
+                            <option value="">Agama</option>
+                            <option value="islam">Islam</option>
+                            <option value="kristen">Kristen</option>                    
+                            <option value="hindu">Hindu</option>
+                            <option value="budha">Budha</option>
+                            <option value="konghucu">Konghucu</option>
+                            <option value="katolik">Katolik</option>
+                        </select>
+                    </div>  
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="pekerjaan" placeholder="Pekerjaan"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="tempattinggal" placeholder="Tempat Tinggal"/>
+                    </div>
+                </div>
+                <div class="row"><p style="text-align: left;"><b>II.&emsp;Calon Istri</b></p></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="nama" placeholder="Nama Lengkap dan Alias"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="binti" placeholder="Binti"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">                    
+                        Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                    </div>
+                    <div class="col-md-6">
+                        Tanggal Lahir <input type="date" name="tanggalLahir">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="warganegara" placeholder="Warganegara"/>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="input" name="agama" id="">
+                            <option value="">Agama</option>
+                            <option value="islam">Islam</option>
+                            <option value="kristen">Kristen</option>                    
+                            <option value="hindu">Hindu</option>
+                            <option value="budha">Budha</option>
+                            <option value="konghucu">Konghucu</option>
+                            <option value="katolik">Katolik</option>
+                        </select>
+                    </div>  
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="pekerjaan" placeholder="Pekerjaan"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="tempattinggal" placeholder="Tempat Tinggal"/>
+                    </div>
+                </div>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title"><u>Surat Keterangan Tentang Orang Tua</u></h2>
+                <div class="row"><p style="text-align: left;">Yang mengetik dibawah ini menerangkan sesungguhnya: </p></div>
+                <div class="row">
+                        <div class="col-md-1">
+                            <p>I&emsp;</p>
+                        </div>
+                        <div class="col-md-11">
+                            <input type="text" name="nama" placeholder="Nama Lengkap dan Alias"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-6">                    
+                            Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                        </div>
+                        <div class="col-md-5">
+                            Tanggal Lahir <input type="date" name="tanggalLahir">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="warganegara" placeholder="Warganegara"/>
+                        </div>
+                        <div class="col-md-5">
+                            <select class="input" name="agama" id="">
+                                <option value="">Agama</option>
+                                <option value="islam">Islam</option>
+                                <option value="kristen">Kristen</option>                    
+                                <option value="hindu">Hindu</option>
+                                <option value="budha">Budha</option>
+                                <option value="konghucu">Konghucu</option>
+                                <option value="katolik">Katolik</option>
+                            </select>
+                        </div>  
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" name="pekerjaan" placeholder="Pekerjaan"/>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="tempattinggal" placeholder="Tempat Tinggal"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-1">
+                                <p>II&emsp;</p>
+                            </div>
+                            <div class="col-md-11">
+                                <input type="text" name="nama" placeholder="Nama Lengkap dan Alias"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                            </div>
+                            <div class="col-md-6">                    
+                                Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                            </div>
+                            <div class="col-md-5">
+                                Tanggal Lahir <input type="date" name="tanggalLahir">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="warganegara" placeholder="Warganegara"/>
+                            </div>
+                            <div class="col-md-5">
+                                <select class="input" name="agama" id="">
+                                    <option value="">Agama</option>
+                                    <option value="islam">Islam</option>
+                                    <option value="kristen">Kristen</option>                    
+                                    <option value="hindu">Hindu</option>
+                                    <option value="budha">Budha</option>
+                                    <option value="konghucu">Konghucu</option>
+                                    <option value="katolik">Katolik</option>
+                                </select>
+                            </div>  
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                            </div>
+                            <div class="col-md-5">
+                                <input type="text" name="pekerjaan" placeholder="Pekerjaan"/>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="tempattinggal" placeholder="Tempat Tinggal"/>
+                            </div>
+                        </div>
+                            <div class="row"><p style="text-align: left;">Adalah benar ayah kandung dan ibu kandung dari seorang: </p></div>
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-6">
+                                <input type="text" name="nama" placeholder="Nama Lengkap dan Alias"/>
+                            </div>
+                            <div class="col-md-5">
+                                <select class="input" name="" id="">
+                                    <option value="">Jenis Kelamin</option>
+                                        <option value="pria">Pria</option>
+                                        <option value="wanita">Wanita</option>
+                                    </select>
+                                </div>
+                        </div>
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-6">                    
+                                    Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                                </div>
+                                <div class="col-md-5">
+                                    Tanggal Lahir <input type="date" name="tanggalLahir">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-6">
+                                    <input type="text" name="warganegara" placeholder="Warganegara"/>
+                                </div>
+                                <div class="col-md-5">
+                                    <select class="input" name="agama" id="">
+                                        <option value="">Agama</option>
+                                        <option value="islam">Islam</option>
+                                        <option value="kristen">Kristen</option>                    
+                                        <option value="hindu">Hindu</option>
+                                        <option value="budha">Budha</option>
+                                        <option value="konghucu">Konghucu</option>
+                                        <option value="katolik">Katolik</option>
+                                    </select>
+                                </div>  
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-5">
+                                    <input type="text" name="pekerjaan" placeholder="Pekerjaan"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="tempattinggal" placeholder="Tempat Tinggal"/>
+                                </div>
+                            </div>                        
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title"><u>Surat Izin Orang Tua</u></h2>
+                <div class="row"><p style="text-align: left;">Yang mengetik dibawah ini :</p></div>
+                <div class="row">
+                        <div class="col-md-1">
+                            <p>I&emsp;</p>
+                        </div>
+                        <div class="col-md-11">
+                            <input type="text" name="nama" placeholder="Nama Lengkap dan Alias"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-6">                    
+                            Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                        </div>
+                        <div class="col-md-5">
+                            Tanggal Lahir <input type="date" name="tanggalLahir">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="warganegara" placeholder="Warganegara"/>
+                        </div>
+                        <div class="col-md-5">
+                            <select class="input" name="agama" id="">
+                                <option value="">Agama</option>
+                                <option value="islam">Islam</option>
+                                <option value="kristen">Kristen</option>                    
+                                <option value="hindu">Hindu</option>
+                                <option value="budha">Budha</option>
+                                <option value="konghucu">Konghucu</option>
+                                <option value="katolik">Katolik</option>
+                            </select>
+                        </div>  
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" name="pekerjaan" placeholder="Pekerjaan"/>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="tempattinggal" placeholder="Tempat Tinggal"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-1">
+                                <p>I&emsp;</p>
+                            </div>
+                            <div class="col-md-11">
+                                <input type="text" name="nama" placeholder="Nama Lengkap dan Alias"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                            </div>
+                            <div class="col-md-6">                    
+                                Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                            </div>
+                            <div class="col-md-5">
+                                Tanggal Lahir <input type="date" name="tanggalLahir">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="warganegara" placeholder="Warganegara"/>
+                            </div>
+                            <div class="col-md-5">
+                                <select class="input" name="agama" id="">
+                                    <option value="">Agama</option>
+                                    <option value="islam">Islam</option>
+                                    <option value="kristen">Kristen</option>                    
+                                    <option value="hindu">Hindu</option>
+                                    <option value="budha">Budha</option>
+                                    <option value="konghucu">Konghucu</option>
+                                    <option value="katolik">Katolik</option>
+                                </select>
+                            </div>  
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                            </div>
+                            <div class="col-md-5">
+                                <input type="text" name="pekerjaan" placeholder="Pekerjaan"/>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="tempattinggal" placeholder="Tempat Tinggal"/>
+                            </div>
+                        </div>
+                <div class="row">
+                    <p>adalah ayah kandung dan ibu kandung dari: </p>
+                </div>
+                <div class="row">
+                        <div class="col-md-1">
+                            <p>I&emsp;</p>
+                        </div>
+                        <div class="col-md-11">
+                            <input type="text" name="nama" placeholder="Nama Lengkap dan Alias"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-6">                    
+                            Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                        </div>
+                        <div class="col-md-5">
+                            Tanggal Lahir <input type="date" name="tanggalLahir">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="warganegara" placeholder="Warganegara"/>
+                        </div>
+                        <div class="col-md-5">
+                            <select class="input" name="agama" id="">
+                                <option value="">Agama</option>
+                                <option value="islam">Islam</option>
+                                <option value="kristen">Kristen</option>                    
+                                <option value="hindu">Hindu</option>
+                                <option value="budha">Budha</option>
+                                <option value="konghucu">Konghucu</option>
+                                <option value="katolik">Katolik</option>
+                            </select>
+                        </div>  
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" name="pekerjaan" placeholder="Pekerjaan"/>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="tempattinggal" placeholder="Tempat Tinggal"/>
+                        </div>
+                    </div>
+                    <div class="row"><p>memberikan izin kepadanya untuk melakukan pernikahan dengan: </p></div>        
+                    <div class="row">
+                            <div class="col-md-1">
+                                <p>I&emsp;</p>
+                            </div>
+                            <div class="col-md-11">
+                                <input type="text" name="nama" placeholder="Nama Lengkap dan Alias"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                            </div>
+                            <div class="col-md-6">                    
+                                Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                            </div>
+                            <div class="col-md-5">
+                                Tanggal Lahir <input type="date" name="tanggalLahir">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="warganegara" placeholder="Warganegara"/>
+                            </div>
+                            <div class="col-md-5">
+                                <select class="input" name="agama" id="">
+                                    <option value="">Agama</option>
+                                    <option value="islam">Islam</option>
+                                    <option value="kristen">Kristen</option>                    
+                                    <option value="hindu">Hindu</option>
+                                    <option value="budha">Budha</option>
+                                    <option value="konghucu">Konghucu</option>
+                                    <option value="katolik">Katolik</option>
+                                </select>
+                            </div>  
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                            </div>
+                            <div class="col-md-5">
+                                <input type="text" name="pekerjaan" placeholder="Pekerjaan"/>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="tempattinggal" placeholder="Tempat Tinggal"/>
+                            </div>
+                        </div>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>    
+            <fieldset>
+                <h2 class="fs-title"><u>Surat Kematian Suami/Istri</u></h2>
+                <div class="row">
+                    <div class="col-md-1">
+                        <p style="text-align: left;"><b>I&emsp;</b></p></div>
+                    </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <input type="text" name="nama" placeholder="Nama Lengkap dan Alias"/>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" name="bin" placeholder="Bin"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">                    
+                        Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                    </div>
+                    <div class="col-md-5">
+                        Tanggal Lahir <input type="date" name="tanggalLahir">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <input type="text" name="warganegara" placeholder="Warganegara"/>
+                    </div>
+                    <div class="col-md-5">
+                        <select class="input" name="agama" id="">
+                            <option value="">Agama</option>
+                            <option value="islam">Islam</option>
+                            <option value="kristen">Kristen</option>                    
+                            <option value="hindu">Hindu</option>
+                            <option value="budha">Budha</option>
+                            <option value="konghucu">Konghucu</option>
+                            <option value="katolik">Katolik</option>
+                        </select>
+                    </div>  
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <input type="text" name="pekerjaan" placeholder="Pekerjaan Terakhir"/>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" name="tempattinggal" placeholder="Tempat Tinggal Terakhir"/>
+                    </div>
+                </div>    
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <p>Telah meninggal dunia pada tanggal: </p>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="date" name="meninggal"/>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-1">
+                            <p style="text-align: left;"><b>I&emsp;</b></p></div>
+                        </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-6">
+                            <input type="text" name="nama" placeholder="Nama Lengkap dan Alias"/>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" name="bin" placeholder="Bin"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-6">                    
+                            Tempat Lahir<input type="text" name="tempatLahir" placeholder="Tempat Lahir">
+                        </div>
+                        <div class="col-md-5">
+                            Tanggal Lahir <input type="date" name="tanggalLahir">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-6">
+                            <input type="text" name="warganegara" placeholder="Warganegara"/>
+                        </div>
+                        <div class="col-md-5">
+                            <select class="input" name="agama" id="">
+                                <option value="">Agama</option>
+                                <option value="islam">Islam</option>
+                                <option value="kristen">Kristen</option>                    
+                                <option value="hindu">Hindu</option>
+                                <option value="budha">Budha</option>
+                                <option value="konghucu">Konghucu</option>
+                                <option value="katolik">Katolik</option>
+                            </select>
+                        </div>  
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-6">
+                            <input type="text" name="pekerjaan" placeholder="Pekerjaan Terakhir"/>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" name="tempattinggal" placeholder="Tempat Tinggal Terakhir"/>
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-11">
+                            <p>Adalah suami/istri orang yang telah meninggal tersebut di atas.</p>
+                        </div>
+                    </div>     
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+            </fieldset>
+        </form>
+            
+    </div>
+</div>
+    <!-- /.MultiStep Form -->
+
+</body>
+
+<script src="script.js"></script>
+</html>
